@@ -1,0 +1,38 @@
+<div class="panel">
+	<div class="panel-body">
+		<span class="pull-right">
+			<button class="btn btn-info" {{action 'edit' this}}><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+			<button class="btn btn-danger" id="delete-btn" {{bind-attr data-delete=id}} {{bind-attr data-summary=id}}><span class="glyphicon glyphicon-remove"></span> Delete</button>
+		</span>
+
+<h3>{{ id }}</h3>
+
+<div class="form form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-md-2" for="user_id" id="user_id-label">User</label>
+        <p class="form-control-static">{{#link-to "users.view" user}}{{user.username}}{{/link-to}}</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="service_id" id="service_id-label">Service</label>
+        <p class="form-control-static">{{#link-to "services.view" service}}{{service.name}}{{/link-to}}</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="option_id" id="option_id-label">Option</label>
+        <p class="form-control-static">{{#link-to "service_options.view" option}}{{option.option_name}}{{/link-to}}</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="billing_cycle_id" id="billing_cycle_id-label">Billing Cycle</label>
+        <p class="form-control-static">{{#link-to "billing_cycles.view" billing_cycle}}{{billing_cycle.cycle}}{{/link-to}}</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="expire_date" id="expire_date-label">Expire Date</label>
+        <p class="form-control-static">{{expire_date}}</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="status" id="status-label">Status</label>
+        <p class="form-control-static">{{status}}</p>
+    </div>
+</div>
+	</div>
+</div>
+

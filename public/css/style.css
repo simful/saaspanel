@@ -1,0 +1,179 @@
+html, body, h1, h2, h3, h4, h5, h6, input, textarea {
+	font-family: Ubuntu;
+}
+
+body {
+	color: #555;
+	background: #f5f5f5;
+}
+
+.select2-container {
+  padding: 0px;
+  border-width: 0px;
+}
+.select2-container .select2-choice {
+  height: 38px;
+  line-height: 38px;
+}
+.timeago {
+	color: #aaa;
+	font-size: 12px;
+}
+.active .timeago {
+	color: #eee;
+}
+.dataList {
+	border: 1px solid #f5f5f5;
+}
+.dataList li a {
+	border-radius: 0;
+	border-left: 5px solid transparent;
+	border-bottom: 1px solid #f5f5f5;
+	color: #89817f;
+}
+.dataList li.active a:hover, .dataList li.active a {
+	border-left: 5px solid #2ab0ed;
+	background: #DCF4FF;
+	color: #89817f;
+	border-bottom-color: #DCF4FF;
+}
+.form-view label {
+	font-weight: normal;
+}
+.form-view label.control-label.required {
+	font-weight: bold;
+}
+div.dataTables_info {
+	padding: 0;
+	margin-top: 40px;
+	font-size: 11px;
+}
+.pager {
+	padding-top: 10px;
+}
+.item {
+	padding: 10px;
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+}
+.item:first-child {
+	border-top: none;
+}
+
+.nav-wizard {
+	margin-bottom: 10px;
+}
+
+.nav-wizard li {
+	display: block;
+	float: left;
+	width: 25%;
+	box-sizing: border-box;
+	color: #555;
+	background: white;
+	border-left: 1px solid #f5f5f5;
+	padding: 10px;
+	-webkit-transition: background .4s ease-in-out;
+}
+
+
+.nav-wizard li:first-child {
+	border-left: none;
+}
+
+.nav-wizard li.past {
+	background: #bbb;
+	color: white;
+}
+
+.nav-wizard li.active {
+	background: #4ab6f8;
+	color: white;
+}
+
+.nav-wizard .step {
+	font-weight: bold;
+	display: block;
+}
+
+.nav-wizard .description {
+	display: block;
+	font-size: 12px;
+}
+
+.nav-wizard .step-nav {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.nav-wizard .step-icon {
+	padding-top: 5px;
+}
+
+.service-option {
+	float: left;
+	margin-right: 5px !important;
+}
+
+.panel-heading {
+	border-bottom: none;
+}
+
+.panel.panel-primary > .panel-heading {
+	background: #4ab6f8;
+}
+
+.monFor {
+	font-weight: bold;
+}
+.panel-danger > .panel-heading {
+	background: #5cb85c;
+	color: white;
+}
+
+.dash-panel-heading {
+	color: white;
+}
+
+.dashpanel-child ul {
+	list-style: none;
+	display: block;
+}
+
+.dashpanel-child li {
+	float: left;
+	display: block;
+	text-align: center;
+	width: 33%;
+}
+
+.dashpanel-child li h5 {
+	color: #555;
+}
+
+.panel-primary {
+	border: none;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.profile-pic {
+	margin-right: 10px;
+	padding-top: 10px;
+}
+
+.not-required {
+	font-weight: normal;
+}
+
+.item label {
+	width: 100%;
+}
+
+.item .description {
+	display: block;
+	margin-top: 10px;
+	font-size: 0.9em;
+}

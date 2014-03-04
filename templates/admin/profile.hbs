@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-8">
+		<div class="panel panel-primary">
+			<div class="panel-heading">My Information</div>
+			<div class="panel-body">
+				<div class="profile-pic pull-left">
+					<img class="img img-responsive img-polaroid" {{bind-attr src='pic'}}>
+				</div>
+				<h4>{{ profile.full_name }} ({{ username }})</h4>
+				<p>Staff</p>
+				<p>{{ profile.address }}</p>
+				<p>{{ profile.city }}, {{ profile.country }}</p>
+				<hr>
+				<p>{{ email }}</p>
+				<p>{{ profile.phone }}</p>
+			</div>
+		</div>
+	</div>
+</div>

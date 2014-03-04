@@ -1,0 +1,20 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Create New Service</div>
+	<div class="panel-body">
+
+<div class="form form-horizontal form-view">
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="name" id="name-label">Name</label>
+		<div class="col-md-6">{{input id="name" class="form-control type-varchar" value=name}}</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 " for="description" id="description-label">Description</label>
+		<div class='col-md-10'>{{view Em.TextArea value=description class='form-control type=-text' rows='5'}}</div>	</div>
+	<div class="col-md-offset-2">
+		<button class="btn btn-primary" {{action 'save'}}>Save</button>
+		<button class="btn btn-default" {{action 'cancel'}}>Cancel</button>
+	</div>
+</div>
+
+	</div>
+</div>

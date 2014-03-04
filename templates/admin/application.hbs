@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default" role="navigation" style="background: rgba(255,255,255,0.7); border-color: transparent;">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">SaaS Panel</a>
+		</div>
+	
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+		
+			<ul class="nav navbar-nav">
+				{{partial 'menu'}}
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown">{{username}} <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/profile">My Profile</a></li>
+						<li><a href="/user/logout">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	{{outlet}}
+</div>
+
+<div id="confirm-deletion" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4>Confirm Deletion</h4>
+			</div>
+
+			<div class="modal-body">
+				<div id="context-message"></div>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button id="confirmDelete" type="button" class="btn btn-primary" data-target="">Delete</button>
+			</div>
+		</div>
+	</div>
+</div>

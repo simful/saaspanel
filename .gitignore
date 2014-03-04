@@ -1,0 +1,17 @@
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
+/gen
+/tmp
+/public/bower_components
+/app/config/local
+/public/js/admin.js
+/public/js/admin_tpl.js
+/public/js/client.js
+/public/js/client_tpl.js
+/workbench
+/schemas
+/node_modules

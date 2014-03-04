@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Edit Campaign</div>
+	<div class="panel-body">
+
+<div class="form form-horizontal form-view">
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="title" id="title-label">Title</label>
+		<div class="col-md-6">{{input id="title" class="form-control type-varchar" value=title}}</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="description" id="description-label">Description</label>
+		<div class='col-md-10'>{{view Em.TextArea value=description class='form-control type=-text' rows='5'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="template_id" id="template_id-label">Template</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='template_id_array' valueBinding='template' optionLabelPath='content.name' class='form-control'}}</div>	</div>
+	<div class="col-md-offset-2">
+		<button class="btn btn-primary" {{action 'save'}}>Save</button>
+		<button class="btn btn-default" {{action 'cancel'}}>Cancel</button>
+	</div>
+</div>
+
+	</div>
+</div>

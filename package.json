@@ -1,0 +1,19 @@
+{
+  "name": "books",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Simful Books",
+  "dependencies": {
+    "grunt-ember-templates": "~0.4.16",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0"
+  },
+  "scripts": {
+    "start": "php artisan serve",
+    "debug": "php artisan serve"
+  },
+  "main": "public/index.php",
+  "repository": "",
+  "author": "",
+  "license": ""
+}

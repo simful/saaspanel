@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Edit Ticket</div>
+	<div class="panel-body">
+
+<div class="form form-horizontal form-view">
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="user_id" id="user_id-label">User</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='user_id_array' valueBinding='user' optionLabelPath='content.username' class='form-control'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="department_id" id="department_id-label">Department</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='department_id_array' valueBinding='department' optionLabelPath='content.name' class='form-control'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="title" id="title-label">Title</label>
+		<div class="col-md-6">{{input id="title" class="form-control type-varchar" value=title}}</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="message" id="message-label">Message</label>
+		<div class='col-md-10'>{{view Em.TextArea value=message class='form-control type=-text' rows='5'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="status" id="status-label">Status</label>
+		<div class="col-md-6">{{input id="status" class="form-control type-varchar" value=status}}</div>
+	</div>
+	<div class="col-md-offset-2">
+		<button class="btn btn-primary" {{action 'save'}}>Save</button>
+		<button class="btn btn-default" {{action 'cancel'}}>Cancel</button>
+	</div>
+</div>
+
+	</div>
+</div>

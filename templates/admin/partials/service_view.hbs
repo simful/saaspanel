@@ -1,0 +1,81 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Options</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<th>Option</th>
+						<th>Price</th>
+						<th></th>
+					</thead>
+
+					<tbody>
+						{{#each service_options}}
+						<tr>
+							{{#if isEdit}}
+							<td>{{input value=option_name class="form-control"}}</td>
+							<td>{{input value=base_price class="form-control"}}</td>
+							<td>
+								<button class="btn btn-success" {{action 'saveOption' this}}><span class="glyphicon glyphicon-ok"></span></button>
+							</td>
+							{{else}}
+							<td>{{option_name}}</td>
+							<td>{{money base_price}}</td>
+							<td>
+								<button class="btn btn-info" {{action 'editOption' this}}><span class="glyphicon glyphicon-pencil"></span></button>
+								<button class="btn btn-danger" {{action 'deleteOption' this}}><span class="glyphicon glyphicon-remove"></span></button>
+							</td>
+							{{/if}}
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+
+				<button class="btn btn-primary" {{action 'addOption'}}><i class="fa fa-plus"></i> Add Option</i></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Billing Cycles</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<th>Billing Cycle</th>
+						<th>Discount</th>
+						<th></th>
+					</thead>
+
+					<tbody>
+						{{#each billing_cycles}}
+						<tr>
+							{{#if isEdit}}
+							<td>{{input value=cycle class="form-control"}}</td>
+							<td>{{input value=discount class="form-control"}}</td>
+							<td>
+								<button class="btn btn-success" {{action 'saveCycle' this}}><span class="glyphicon glyphicon-ok"></span></button>
+							</td>
+							{{else}}
+							<td>{{cycle}} month(s)</td>
+							<td>{{discount}} %</td>
+							<td>
+								<button class="btn btn-info" {{action 'editCycle' this}}><span class="glyphicon glyphicon-pencil"></span></button>
+								<button class="btn btn-danger" {{action 'removeCycle' this}}><span class="glyphicon glyphicon-remove"></span></button>
+							</td>
+							{{/if}}
+						</tr>
+						{{/each}}
+
+
+					</tbody>
+				</table>
+
+				<button class="btn btn-primary" {{action 'addBillingCycle'}}><i class="fa fa-plus"></i> Add Billing Cycle</i></button>
+			</div>
+		</div>
+	</div>
+</div>

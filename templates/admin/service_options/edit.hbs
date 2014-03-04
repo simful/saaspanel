@@ -1,0 +1,25 @@
+<div class="panel">
+	<div class="panel-body">
+		<h3>Edit Option</h3>
+
+<div class="form form-horizontal form-view">
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="service_id" id="service_id-label">Service</label>
+		<div class='col-md-8'>{{view Ember.Select contentBinding='service_id_array' valueBinding='service' optionLabelPath='content.id' class='form-control' prompt='Select an action'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="option_name" id="option_name-label">Option Name</label>
+		<div class="col-md-6">{{input id="option_name" class="form-control type-varchar" value=option_name}}</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="base_price" id="base_price-label">Base Price</label>
+		<div class='col-md-4'>	<div class='input-group'>		<span class="input-group-addon">$</span>		{{input id="base_price" class="form-control type-money" value=base_price}}
+	</div></div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 " for="description" id="description-label">Description</label>
+		<div class='col-md-10'>{{view Em.TextArea value=description class='form-control type=-text' rows='5'}}</div>	</div>
+	<button class="btn btn-primary" {{action 'save'}}>Save</button>
+	<button class="btn btn-default" {{action 'cancel'}}>Cancel</button>
+</div>
+
+	</div>
+</div>

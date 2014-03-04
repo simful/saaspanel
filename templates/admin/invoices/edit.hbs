@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Edit Invoice</div>
+	<div class="panel-body">
+
+<div class="form form-horizontal form-view">
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="user_id" id="user_id-label">User</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='user_id_array' valueBinding='user' optionLabelPath='content.username' class='form-control'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="due_date" id="due_date-label">Due Date</label>
+		<div class='col-md-4'>
+	<div class='input-group date type-date' id='due_date'>
+		{{view App.DateField class='form-control' valueBinding=due_date}}
+		<span class='input-group-addon'><i class='fa fa-calendar'></i></span>
+	</div>
+</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="status" id="status-label">Status</label>
+		<div class='col-md-4'>
+	{{view App.Select2 content=status_choices value=status class='form-control'}}
+</div>	</div>
+	<div class="col-md-offset-2">
+		<button class="btn btn-primary" {{action 'save'}}>Save</button>
+		<button class="btn btn-default" {{action 'cancel'}}>Cancel</button>
+	</div>
+</div>
+
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="panel">
+	<div class="panel-heading">Items</div>
+	<div class="panel-body">
+		<table class="table">
+			<thead>
+				<th>Name</th>
+				<th>Qty</th>
+				<th>Price</th>
+			</thead>
+
+			<tbody>
+				{{#each model.items}}
+					{{name}}
+					{{quantity}}
+					{{base_price}}
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>

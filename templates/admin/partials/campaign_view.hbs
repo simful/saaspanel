@@ -1,0 +1,21 @@
+<div class="panel">
+	<div class="panel-heading">Audience</div>
+	<div class="panel-body">
+		{{#each users}}
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="{{ users.id }}" name="recipients">
+					{{ username }}
+				</label>
+			</div>
+		{{/each}}
+	</div>
+</div>
+
+<div class="panel">
+	<div class="panel-heading">Campaign Status</div>
+	<div class="panel-body">
+		<p>This campaign has not started. Click the button below to start sending.</p>
+		<button class="btn btn-primary">Start Campaign</button>
+	</div>
+</div>

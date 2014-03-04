@@ -1,0 +1,61 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <span class="label label-success">{{ status }}</span> Ticket #{{ id }}
+        <span class="pull-right" style="font-size: 0.8em">created at {{ created_at }}</span>
+    </div>
+    <div class="panel-body">
+        <h3 style="margin-top: 0">{{ title }}</h3>
+        {{ message }}
+
+        <p>{{ username }}</p>
+
+        {{#if status}}
+            <form action="/client/ticket/close" method="post">
+                <input type="hidden" name="ticket_id" value="{{ id }}"/>
+                <button type="submit" class="btn btn-danger pull-right">Close Ticket</button>
+            </form>
+        {{else}}
+            <form action="/client/ticket/reopen" method="post">
+                <input type="hidden" name="ticket_id" value="{{ id }}"/>
+                <button type="submit" class="btn btn-primary pull-right">Reopen Ticket</button>
+            </form>
+        {{/if}}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-11 col-md-offset-1">
+        {{#each replies}}
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    {{ username }} <span class="pull-right" style="font-size: 0.8em">replied at {{ stamp }}</span>
+                </div>
+                <div class="panel-body">
+                    {{ message }}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+{{#if status}}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Post a new reply
+    </div>
+    <div class="panel-body">
+        <form action="/client/ticket/reply" method="post">
+            <input type="hidden" name="ticket_id" value="{{ id }}"/>
+            <textarea name="message" rows="10" class="form-control" placeholder="Type reply message here"></textarea>
+            <br>
+            <button type="submit" class="btn btn-primary">Send Reply</button>
+        </form>
+    </div>
+</div>
+{{else}}
+<div class="alert alert-info">
+    <i class="fa fa-check"></i> This ticket is already closed.
+</div>
+{{/if}}
+
+{{partial 'partials/ticket_view'}}

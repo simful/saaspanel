@@ -1,0 +1,24 @@
+<div class="panel">
+	<div class="panel-body">
+		<span class="pull-right">
+			<button class="btn btn-info" {{action 'edit' this}}><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+			<button class="btn btn-danger" id="delete-btn" {{bind-attr data-delete=id}} {{bind-attr data-summary=title}}><span class="glyphicon glyphicon-remove"></span> Delete</button>
+		</span>
+
+<h3>{{ title }}</h3>
+
+<div class="form form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-md-2" for="title" id="title-label">Title</label>
+        <p class="form-control-static">{{title}}</p>    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="description" id="description-label">Description</label>
+        <p class="form-control-static">{{description}}</p>    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="template_id" id="template_id-label">Template</label>
+        <p class="form-control-static">{{#link-to "templates.view" template}}{{template.name}}{{/link-to}}</p>    </div>
+</div>
+	</div>
+</div>
+
+{{partial 'partials/campaign_view'}}

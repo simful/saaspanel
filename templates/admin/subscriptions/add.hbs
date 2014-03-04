@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Create New Subscription</div>
+	<div class="panel-body">
+
+<div class="form form-horizontal form-view">
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="user_id" id="user_id-label">User</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='user_id_array' valueBinding='user' optionLabelPath='content.username' class='form-control'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="service_id" id="service_id-label">Service</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='service_id_array' valueBinding='service' optionLabelPath='content.name' class='form-control'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="option_id" id="option_id-label">Option</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='option_id_array' valueBinding='option' optionLabelPath='content.option_name' class='form-control'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="billing_cycle_id" id="billing_cycle_id-label">Billing Cycle</label>
+		<div class='col-md-8'>{{view App.Select2 contentBinding='billing_cycle_id_array' valueBinding='billing_cycle' optionLabelPath='content.cycle' class='form-control'}}</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 required" for="expire_date" id="expire_date-label">Expire Date</label>
+		<div class='col-md-4'>
+	<div class='input-group date type-date' id='expire_date'>
+		{{view App.DateField class='form-control' valueBinding=expire_date}}
+		<span class='input-group-addon'><i class='fa fa-calendar'></i></span>
+	</div>
+</div>	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2 " for="status" id="status-label">Status</label>
+		<div class='col-md-4'>
+	{{view App.Select2 content=status_choices value=status class='form-control'}}
+</div>	</div>
+	<div class="col-md-offset-2">
+		<button class="btn btn-primary" {{action 'save'}}>Save</button>
+		<button class="btn btn-default" {{action 'cancel'}}>Cancel</button>
+	</div>
+</div>
+
+	</div>
+</div>

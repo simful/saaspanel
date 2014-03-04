@@ -1,0 +1,26 @@
+<div class="panel">
+	<div class="panel-body">
+		<span class="pull-right">
+			<button class="btn btn-info" {{action 'edit' this}}><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+			<button class="btn btn-danger" id="delete-btn" {{bind-attr data-delete=id}} {{bind-attr data-summary=username}}><span class="glyphicon glyphicon-remove"></span> Delete</button>
+		</span>
+
+<h3>{{ username }}</h3>
+
+<div class="form form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-md-2" for="username" id="username-label">Username</label>
+        <p class="form-control-static">{{username}}</p>    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="email" id="email-label">Email</label>
+        <p class="form-control-static">{{email}}</p>    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="confirmed" id="confirmed-label">Confirmed</label>
+        <p class="form-control-static">{{confirmed}}</p>    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="role" id="role-label">Role</label>
+        <p class="form-control-static">{{role}}</p>    </div>
+</div>
+	</div>
+</div>
+
