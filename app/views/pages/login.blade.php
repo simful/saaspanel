@@ -17,6 +17,15 @@
 						Login
 					</div>
 					<div class="panel-body">
+
+						@if ( Session::get('error') )
+							<div class="alert alert-danger">{{{ Session::get('error') }}}</div>
+						@endif
+
+						@if ( Session::get('notice') )
+							<div class="alert alert-info">{{{ Session::get('notice') }}}</div>
+						@endif
+
 						<form class="form-signin" action="/user/login" method="post">
 							<div class="form-group">
 								<input type="text" class="form-control input-lg" placeholder="Username or Email" autofocus name="email">
