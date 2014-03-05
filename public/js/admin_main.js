@@ -8,6 +8,11 @@ Ember.Handlebars.helper('money', function(value, options) {
 	return accounting.formatMoney(value);
 });
 
+Ember.Handlebars.helper('equals', function(value1, value2, value3) {
+	if (value === value2)
+		return value3;
+});
+
 App.ApplicationRoute = Ember.Route.extend({
 	model: function() {
 		return new Ember.RSVP.Promise(function(resolve) {

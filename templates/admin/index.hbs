@@ -1,0 +1,34 @@
+<div class="row">
+	<div class="col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="timeline">
+					{{#each activities}}
+						<article {{bind-attr class=":timeline-item admin:alt"}}>
+							<div class="timeline-desk">
+								<div class="panel">
+									<div class="panel-body">
+										<span class="arrow"></span>
+										<span class="timeline-icon red"></span>
+										<span class="timeline-date">{{timeago created_at}}</span>
+										<h1 class="red">{{ actor }}</h1>
+										<p>{{ message }}</p>
+									</div>
+								</div>
+							</div>
+						</article>
+					{{ else }}
+						<div style="font-style: italic">No activity to display.</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Statistics</div>
+			{{partial 'partials/statistics'}}
+		</div>
+	</div>
+</div>
