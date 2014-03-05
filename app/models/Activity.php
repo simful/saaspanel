@@ -19,9 +19,9 @@ class Activity extends Eloquent
 {
 	function log($activity)
 	{
-		DB::table('activities')->insert(array(
-			'message' => $activity,
-			'user_id' => Auth::user()->id
-		));
+		$act = new Activity;
+		$act->message = $activity;
+		$act->user_id = Auth::user()->id;
+		$act->save();
 	}
 }
