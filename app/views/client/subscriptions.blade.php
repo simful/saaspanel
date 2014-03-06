@@ -24,7 +24,7 @@
 								);
 							?>
 						<td><span class="label {{ isset($label_map[$subscription->status]) ? $label_map[$subscription->status] : 'label-default' }}">{{ $subscription->status }}</span> {{ $subscription->service->name }}</td>
-						<td>{{ $subscription->billing_cycle }} month(s)</td>
+						<td>{{ $subscription->billingCycle->cycle }} month(s)</td>
 						<td>
 							<a href="#" class="btn btn-danger btn-xs" disabled>Stop</a>
 						</td>
