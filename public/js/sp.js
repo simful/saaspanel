@@ -17,7 +17,11 @@ $(document).ready(function() {
 		updateCart();
 	});
 
-	$('#cart .removeFromCart').click(function() {
+	$('.removeFromCart').click(function() {
 		$.post('/order/removeFromCart', { id: $(this).attr('data-key') }, function() { location.reload(); });
+	});
+
+	$('.monFor').each(function(i, e) {
+		$(this).html(accounting.formatMoney($(this).html()));
 	});
 });

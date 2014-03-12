@@ -92,12 +92,5 @@
 		Powered by SaaSPanel
 	</div>
 	<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.monFor').each(function(i, e) {
-				$(this).html(accounting.formatMoney($(this).html()));
-			});
-		});
-	</script>
 </body>
 </html>

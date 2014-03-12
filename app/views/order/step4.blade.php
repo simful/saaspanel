@@ -35,20 +35,9 @@
 					<a href="/order" class="btn btn-info">Continue Shopping</a>
 					<button type="submit" class="btn btn-danger" {{ count(Cart::contents()) > 0 ? '' : 'disabled' }}><i class="fa fa-shopping-cart"></i> Confirm Checkout</button>
 				</p>
-			</form
+			</form>
 		</div>
 	</div>
-
-	<script>
-		$(document).ready(function() {
-			$('#cart .removeFromCart').click(function() {
-				$.post('/order/removeFromCart', { id: $(this).attr('data-key') }, function() { location.reload(); });
-			});
-
-			$('.monFor').each(function(i, e) {
-				$(this).html(accounting.formatMoney($(this).html()));
-			});
-		});
-	</script>
+	<script src="/js/sp.js"></script>
 @stop
 
