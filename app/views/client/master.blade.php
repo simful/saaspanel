@@ -64,7 +64,14 @@
 							Payments
 						</a>
 					</li>
+					<li>
+						<a href="/order">
+							<i class="fa fa-shopping-cart"></i>
+							Order
+						</a>
+					</li>
 				</ul>
+
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
@@ -77,7 +84,6 @@
 				</ul>
 				@else
 					<div class="pull-right">
-						<a href="/order" class="btn btn-primary navbar-btn">Order</a>
 						<a href="/user/login" class="btn btn-primary navbar-btn">Login</a>
 						<a href="/user/create" class="btn btn-primary navbar-btn">Register</a>
 					</div>

@@ -34,6 +34,7 @@
 				<div class="panel-heading">Client Login</div>
 				<div class="panel-body">
 					<p>To view and manage your account, you have to be logged in.</p>
+					<a href="/user/login" class="btn btn-primary">Enter Client Area</a>
 				</div>
 			</div>
 		</div>
